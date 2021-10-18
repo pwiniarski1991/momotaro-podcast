@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Link from 'next/link';
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Player.module.css'
 
 const Player: NextPage = () => {
   return (
@@ -13,54 +13,30 @@ const Player: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className={styles.topCircle}></div>
+      <div className={styles.triangle}></div>
+      <div className={styles.bottomCircle}></div>
+      <div className={styles.shape}></div>
+
       <main className={styles.main}>
-
-        <div className={styles.grid}>
-
-          <Link href="/" passHref>
-            <a className={styles.card}>Homepage &rarr;</a>
-          </Link>
-
-          <Link href="/details" passHref>
-            <a className={styles.card}>Details &rarr;</a>
-          </Link>
-
-          <Link href="/player" passHref>
-            <a className={styles.card}>Player &rarr;</a>
-          </Link>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <h2 className={styles.heading2}>Welcome to Night<br />Vale Story</h2>
+        <div className={styles.ring}>
+          <div className={styles.outer}></div>
+          <div className={styles.inner}></div>
+          <button className={styles.playerAction}>
+            <div className={styles.pauseBtn}>
+              <Image src='/pause.png' alt="Pause" width={22} height={29} />
+            </div>
+          </button>
         </div>
+        <button className={styles.playBtn}>
+          <Image src='/playBtn.svg' alt="Player Button" height={48} width={48} />
+          <div className={styles.right}>
+            <div className={styles.subTitle}>Next: Sleep Reflection</div>
+            <span>15 minutes</span>
+          </div>
+        </button>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }

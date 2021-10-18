@@ -1,0 +1,150 @@
+
+.heading2 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 4.9rem;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.main {
+  background: var(--primary-light);
+  justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  padding: 12.9rem 0 0 0;
+}
+
+.main > * {
+  z-index: 1;
+}
+
+.ring {
+  position: relative;
+  width: 22.3rem;
+  height: 22.3rem;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.ring::after {
+  content: "";
+  display: inline-block;
+  padding-top: 100%;
+}
+.ring::before {
+  content:"";
+  animation: spin infinite 3s;
+  position: absolute;
+  z-index: -1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background: linear-gradient(60deg,var(--primary-dark) 70%, #7FE3F0 0);
+  padding: 12px;
+  border-radius: 50%;
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.playerAction {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 16.2rem;
+  width: 16.2rem;
+  border-radius: 10rem;
+  border: none;
+  transform: translate(19%, 18%);
+}
+
+.playBtn {
+  position: absolute;
+  bottom: 3.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 3rem 1.8rem 2rem;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0px 10px 30px rgba(112, 136, 210, 0.1);
+  border-radius: 1.6rem;
+}
+
+.right {
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.subTitle {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.2px;
+  margin-bottom: 8px;
+  color: #2D3142;
+}
+
+.bottomCircle {
+  position: absolute;
+  left: 7.6rem;
+  bottom: 17rem;
+  border-radius: 50%;
+  background-color: #8276EE;
+  width: 5.2rem;
+  height: 5.2rem;
+}
+
+.topCircle {
+  position: absolute;
+  left: 50%;
+  top: 6.6rem;
+  border-radius: 50%;
+  background-color: #8276EE;
+  width: 5.2rem;
+  height: 5.2rem;
+}
+
+.triangle {
+  position: absolute;
+  transform: rotate(
+45deg);
+  top: 10rem;
+  left: -1rem;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-right-width: 11rem;
+  border-left-width: 11rem;
+  border-bottom: 18rem solid #8276EE;
+}
+
+.shape {
+  position: absolute;
+  background-image: url('/shape.png');
+  background-repeat: no-repeat;
+  right: -2.5rem;
+  bottom: 24rem;
+  width: 24.8rem;
+  height: 21.5rem;
+}
+
+@keyframes spin {
+  from {
+    rotate: 0;
+  }
+  to {
+    rotate: 360deg;
+  }
+}

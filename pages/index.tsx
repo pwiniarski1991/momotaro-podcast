@@ -13,10 +13,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.heading1}>
-          Podcast
-        </h1>
+      <main>
+        <h1>Podcast</h1>
 
         <div className={styles.daily_pick}>
           <div className={styles.bgImages}>
