@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
-import Link from 'next/link';
 import Head from 'next/head'
-import Image from 'next/image'
+import { DailyPick } from '../components/dailyPick/DailyPick';
+import { Card } from '../components/card/Card';
+import { Premium } from '../components/premium/Premium';
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -16,59 +17,52 @@ const Home: NextPage = () => {
       <main>
         <h1>Podcast</h1>
 
-        <div className={styles.daily_pick}>
-          <div className={styles.bgImages}>
-          </div>
-          <div className={styles.content}>
-            <span className={styles.name}>Daily Pick</span>
-            <h2 className={styles.heading2}>sleep with me<br /> bedtime stories</h2>
-            <p className={styles.description}>
-              Train your mind for a happier, healthier life
-            </p>
-
-            <button className={styles.startBtn}><Image src="/arrow.png" alt="Arrow" width={15} height={12} /><span className={styles.arrowBtn}>Let's start</span></button>
-          </div>
-        </div>
+        <DailyPick
+          name="Daily Pick"
+          heading2="sleep with me bedtime stories"
+          description="Train your mind for a happier, healthier life"
+          src="/arrow.png"
+          alt="Arrow"
+          btnLabel="Let's start"
+        />
 
         <h3 className={styles.heading3}>Wellness</h3>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <div className={styles.imgCard}>
-              <div className={styles.label}>New</div>
-            </div>
-            <div className={styles.title}>Living Beyond Fear</div>
-            <span className={styles.postedAgo}>15 minutes</span>
-          </div>
+          <Card
+            id="beyond_fear"
+            label="New"
+            title="Beyond Living Fear"
+            postedAgo="15 minutes"
+          />
+          <Card
+            id="twilight_zone"
+            title="The Twilight Zone"
+            postedAgo="15 minutes"
+          />
+          <Card
+            id="retrain_brain"
+            label="New"
+            title="Retrain Your Brain"
+            postedAgo="15 minutes"
+          />
 
-          <div className={styles.card}>
-            <div className={styles.imgCard}>
-            </div>
-            <div className={styles.title}>The Twilight Zone</div>
-            <span className={styles.postedAgo}>15 minutes</span>
-          </div>
+          <Card
+            id="meditation_lullaby"
+            title="A Medidation Lullaby"
+            postedAgo="15 minutes"
+          />
 
-          <div className={styles.card}>
-            <div className={styles.imgCard}>
-              <div className={styles.label}>New</div>
-            </div>
-            <div className={styles.title}>Retrain your brain</div>
-            <span className={styles.postedAgo}>15 minutes</span>
-          </div>
-
-          <div className={styles.card}>
-            <div className={styles.imgCard}>
-            </div>
-            <div className={styles.title}>A Mediatation Lullaby</div>
-            <span className={styles.postedAgo}>15 minutes</span>
-          </div>
         </div>
 
-        <div className={styles.premium}>
-          <h4 className={styles.heading4}>GO PREMIUM</h4>
-          <div className={styles.subheading}>Time to unlock full library</div>
-          <button className={styles.primaryBtn}>Go Premium</button>
-        </div>
+        <Premium
+          title="GO PREMIUM"
+          subtitle="Time to unlock full library"
+          btnLabel="Go Premium"
+          src="/add_button.png"
+          alt="Add Button"
+        />
+
       </main>
 
     </div>

@@ -29,11 +29,12 @@ const Player: NextPage = () => {
             </div>
           </button>
         </div>
+        <span className={styles.time}>4:35</span>
         <button className={styles.playBtn}>
           <Image src='/playBtn.svg' alt="Player Button" height={48} width={48} />
           <div className={styles.right}>
             <div className={styles.subTitle}>Next: Sleep Reflection</div>
-            <span>15 minutes</span>
+            <span className={styles.duration}>15 minutes</span>
           </div>
         </button>
       </main>
