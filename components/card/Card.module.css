@@ -1,0 +1,25 @@
+.label {
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  padding: 0.9rem;
+  letter-spacing: 0.2px;
+  color: #7265E3;
+  background-color: #ffffff;
+  width: max-content;
+}
+
+.imgCard {
+  width: 15.3rem;
+  height: 11.3rem;
+  padding: 1.3rem 0 0 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.postedAgo {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.171429px;
+  color: #9C9EB9;
+}

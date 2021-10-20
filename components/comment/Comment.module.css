@@ -1,0 +1,41 @@
+.comment {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2.2rem;
+  margin-top: 1.4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.label {
+  display: flex;
+  padding: 0.9rem 1.2rem;
+  background: #E4DFFF;
+  border-radius: 1.2rem;
+  margin-left: auto;
+  height: 3.2rem;
+}
+
+.description {
+  margin-left: 1.6rem;
+}
+
+.rateNumber {
+  margin-left: 4px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #7265E3;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 1.4rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

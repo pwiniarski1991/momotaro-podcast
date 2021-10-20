@@ -1,0 +1,64 @@
+.daily_pick {
+  position: relative;
+  background-color: #8C80F8;
+  text-align: center;
+  z-index: 0;
+}
+
+.bgImages {
+  position: absolute;
+  display: block;
+  background: url('/swinging.png'), url('/shape1.svg'), url('/shape2.svg');
+  background-position:
+    top -10px left, top 26px right -10px, bottom -15px left 10px;
+  background-size: auto, 30%, 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  padding: 4.3rem 1.4rem 1.5rem;
+}
+
+.content > * {
+  z-index: 2;
+}
+
+.name {
+  color: #7FE3F0;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  text-transform: uppercase;
+}
+
+.heading2 {
+  margin: 0.94rem 0 1.56rem 0;
+  line-height: 1.875rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.description {
+  color: #ffffff;
+  margin: 0.75rem auto;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.startBtn {
+  background: #7265E3;
+  border: none;
+  border-radius: 1rem;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding: 1.9rem 3.1rem 1.8rem 3.4rem;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+}

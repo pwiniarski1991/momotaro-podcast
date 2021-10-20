@@ -1,0 +1,41 @@
+.session {
+  display: flex;
+  padding: 1.6rem 0;
+}
+
+.sessionInfo {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.rate {
+  background-color: #E4DFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3.2rem;
+}
+
+.sessionInfo {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.2px;
+  color: #2D3142;
+}
+
+.sessionExtra {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2px;
+  color: #9C9EB9;
+}
+
+.iconBtn {
+  border: none;
+  padding: 0;
+}

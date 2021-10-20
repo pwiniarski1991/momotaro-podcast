@@ -1,0 +1,58 @@
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.7rem;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.author {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2px;
+  color: #2D3142;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+.authorText {
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.2px;
+  color: #4C5980;
+  margin: 1.2rem auto 2rem;
+}
+
+.followBtn {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 2rem;
+  background: #E4DFFF;
+  border: none;
+  border-radius: 1.2rem;
+  margin-left: 1.5rem;
+  font-family: 'Rubik';
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #7265E3;
+}
+
+.image {
+  margin: 1.7rem auto 1.2rem;
+}
+
+.imageContainer {
+  display: flex;
+}
