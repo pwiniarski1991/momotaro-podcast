@@ -18,7 +18,7 @@ interface Props {
 export const Comment: FC<Props> = ({ author, content, rateNumber }) => {
   return (
     <div className={styles.comment}>
-      <Image src={author.src || '/marie.png'} alt={author.alt} height={author.height || 38} width={author.width || 38} />
+      <Image src={`/${author.src}` || '/marie.png'} alt={author.alt} height={author.height || 38} width={author.width || 38} />
       <div className={styles.description}>
         <div className={styles.top}>
           <div className={styles.info}>

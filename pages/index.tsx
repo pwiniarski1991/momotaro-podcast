@@ -4,8 +4,40 @@ import { DailyPick } from '../components/dailyPick/DailyPick';
 import { Card } from '../components/card/Card';
 import { Premium } from '../components/premium/Premium';
 import styles from '../styles/Home.module.css'
+import { Reducer, useEffect, useReducer } from 'react';
+import { fetchData } from '../utils/fetchData';
+import { mainReducer } from '../reducers/main';
+import { IAction, MainState } from '../types/reducer';
+import { dailyPick, premium } from '../config/main';
+
+const INITIAL_STATE = {
+  data: { dailyPick: null, cards: [], premium: null },
+  error: { message: '' },
+  loading: false
+};
 
 const Home: NextPage = () => {
+
+  const [{ data, error, loading }, dispatch] = useReducer<Reducer<MainState, IAction>>(mainReducer, INITIAL_STATE);
+
+  useEffect(() => {
+    dispatch({ type: 'loading', payload: true });
+    fetchData()
+      .then(response => {
+        dispatch({ type: 'data', payload: response })
+      })
+      .catch(error => dispatch({ type: 'error', payload: { message: error.message } }))
+      .finally(() => dispatch({ type: 'loading', payload: false }));
+  }, []);
+
+  if (loading) {
+    return <div>Data is loaded..., please wait</div>
+  }
+
+  if (error.message) {
+    return <div>Data was not fetched properly, error occurs: {error.message}</div>;
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,51 +49,37 @@ const Home: NextPage = () => {
       <main>
         <h1>Podcast</h1>
 
-        <DailyPick
-          name="Daily Pick"
-          heading2="sleep with me bedtime stories"
-          description="Train your mind for a happier, healthier life"
-          src="/arrow.png"
-          alt="Arrow"
-          btnLabel="Let's start"
-        />
+        {data?.dailyPick ? <DailyPick
+          name={data?.dailyPick.name}
+          heading={data?.dailyPick.heading}
+          description={data?.dailyPick.description}
+          src={dailyPick.src}
+          alt={dailyPick.alt}
+          btnLabel={dailyPick.btnLabel}
+        /> : null}
 
         <h3 className={styles.heading3}>Wellness</h3>
 
         <div className={styles.grid}>
-          <Card
-            id="beyond_fear"
-            label="New"
-            title="Beyond Living Fear"
-            postedAgo="15 minutes"
-          />
-          <Card
-            id="twilight_zone"
-            title="The Twilight Zone"
-            postedAgo="15 minutes"
-          />
-          <Card
-            id="retrain_brain"
-            label="New"
-            title="Retrain Your Brain"
-            postedAgo="15 minutes"
-          />
-
-          <Card
-            id="meditation_lullaby"
-            title="A Medidation Lullaby"
-            postedAgo="15 minutes"
-          />
+          {data?.cards.map(card => (
+            <Card
+              key={card.id}
+              id={card.id}
+              label={card.label}
+              title={card.title}
+              postedAgo={card.postedAgo}
+            />
+          ))}
 
         </div>
 
-        <Premium
-          title="GO PREMIUM"
-          subtitle="Time to unlock full library"
-          btnLabel="Go Premium"
-          src="/add_button.png"
-          alt="Add Button"
-        />
+        {data?.premium ? <Premium
+          title={data?.premium?.title}
+          subtitle={data?.premium.subtitle}
+          btnLabel={premium.btnLabel}
+          src={premium.src}
+          alt={premium.alt}
+        /> : null}
 
       </main>
 

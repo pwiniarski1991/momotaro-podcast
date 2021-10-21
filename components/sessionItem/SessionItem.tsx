@@ -9,13 +9,15 @@ interface Props {
   width?: number;
   info: string;
   title: string;
+  isLocked?: boolean;
 }
 
-export const SessionItem: FC<Props> = ({ src = '/play.png', alt = 'Play button', height = 54, width = 54, info, title }) => {
+export const SessionItem: FC<Props> = ({ src = '/play.png', alt = 'Play button', height = 54, width = 54, info, title, isLocked = false }) => {
+  const icon = isLocked ? '/lock.png' : src;
   return (
     <li className={styles.session}>
       <button className={styles.iconBtn}>
-        <Image src={src} alt={alt} height={height} width={width} />
+        <Image src={icon} alt={alt} height={height} width={width} />
       </button>
       <div className={styles.sessionInfo}>
         {title}

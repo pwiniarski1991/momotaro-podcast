@@ -1,0 +1,37 @@
+{
+  "dailyPick": {
+    "name": "Daily Pick",
+    "heading": "sleep with me bedtime stories",
+    "description": "Train your mind for a happier, healthier life"
+  },
+  "cards": [
+    {
+      "id": "beyond_fear",
+      "label": "New",
+      "title": "Beyond Living Fear",
+      "postedAgo": "15 minutes"
+    },
+    {
+      "id": "twilight_zone",
+      "label": "",
+      "title": "The Twilight Zone",
+      "postedAgo": "15 minutes"
+    },
+    {
+      "id": "retrain_brain",
+      "label": "New",
+      "title": "Retrain Your Brain",
+      "postedAgo": "15 minutes"
+    },
+    {
+      "id": "meditation_lullaby",
+      "label": "",
+      "title": "A Medidation Lullaby",
+      "postedAgo": "15 minutes"
+    }
+  ],
+  "premium": {
+    "title": "GO PREMIUM",
+    "subtitle": "Time to unlock full library"
+  }
+}

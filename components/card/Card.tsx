@@ -1,14 +1,8 @@
 import React, { FC } from 'react';
+import { Card as CardProps } from '../../types/index';
 import styles from './Card.module.css';
 
-interface Props {
-  id: string;
-  label?: string;
-  title: string;
-  postedAgo: string;
-}
-
-export const Card: FC<Props> = ({ id, label, title, postedAgo }) => {
+export const Card: FC<CardProps> = ({ id, label, title, postedAgo }) => {
   return (
     <div className={styles.card}>
       <div id={id} className={styles.imgCard}>

@@ -1,0 +1,59 @@
+{
+  "story": {
+    "author": "by Joseph Frak",
+    "label": "Follow",
+    "description": "Train your mind for a happier, healthier life by learning the fundamentals of mediation and mindfullness."
+  },
+  "info": {
+    "text": "Offline download",
+    "fileSize": "100mb"
+  },
+  "sessionItems": [
+    {
+      "id": 1,
+      "title": "Train Whistle At Night",
+      "info": "15 mins • Free",
+      "isLocked": false
+    },
+    {
+      "id": 2,
+      "title": "The Twilight Zone",
+      "info": "30 mins • Free",
+      "isLocked": false
+    },
+    {
+      "id": 3,
+      "title": "Train Whistle At Night",
+      "info": "Locked",
+      "isLocked": true
+    },
+    {
+      "id": 4,
+      "title": "The Twilight Zone",
+      "info": "Locked",
+      "isLocked": true
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "author": {
+        "name": "Marie Smith",
+        "published": "1 mo ago",
+        "src": "marie.png"
+      },
+      "rateNumber": 5.0,
+      "content": "👍 I try other meditation podcasts and always come back to this. Beautifully arranged and spoken. It got me there."
+    },
+    {
+      "id": 2,
+      "author": {
+        "name": "Jackie Snow",
+        "published": "1 mo ago",
+        "src": "jack.png"
+      },
+      "rateNumber": 5.0,
+      "content": "I use this most every morning to get me moving with whatever may be on my mind that needs attention 🤩"
+    }
+  ]
+}
